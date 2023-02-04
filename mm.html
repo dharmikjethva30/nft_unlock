@@ -51,6 +51,12 @@
         const _contract = document.getElementById('contract-input').value;
         const result = await contract.methods.hasNFT(address, _contract).call({ from: account });
         console.log(result);
+        result1 = false;
+        if (result1 == true) {
+          document.getElementById('hasNFT-btn').href = index.html;
+        } else {
+          document.getElementById('hasNFT-btn').textContent = "You don't have the NFT";
+        }
       }
     }
 
